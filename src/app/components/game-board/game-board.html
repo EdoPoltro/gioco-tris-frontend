@@ -1,0 +1,25 @@
+<main class="game-main">
+    <div class="game-container">
+        <div 
+            *ngFor="let item of game.board; let i = index" 
+            class="quadrant"
+            [ngStyle]="{
+                'background-color': item.winner === '1' ? 'red' : 
+                                      item.winner === '2' ? 'blue' : 
+                                      item.winner === '' && game.activeQuadrant == i ? 'green' :
+                                      item.winner === '' && game.activeQuadrant == null ? 'green' :
+                                      item.winner === 'P' ? 'gray' : 'white',
+                'border': item.winner !== '' ? '2px solid black' : 'none'
+            }"
+        >
+            <div 
+                (click)="makeMove(i,j)"
+                *ngFor="let cell of item.dial; let j = index"
+                class="cell"
+            >
+                {{ cell }} 
+            </div>
+        </div>
+    </div>
+</main>
+

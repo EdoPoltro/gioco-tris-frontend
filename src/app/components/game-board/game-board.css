@@ -1,0 +1,53 @@
+/* Stili per il contenitore principale e lo sfondo */
+.game-main {
+    background-color: #FFFBD0;
+}
+
+/* ---------------------------------------------------- */
+/* Stili per la GRIGLIA GRANDE (9 Quadranti) */
+/* ---------------------------------------------------- */
+.game-container {
+    /* Proprietà del DIV principale */
+    margin: 0 auto; 
+    width: 60vh; 
+    height: 60vh; 
+    min-width: 250px; 
+    min-height: 250px; 
+    text-align: center; 
+    
+    /* Proprietà della Griglia */
+    background-color: black; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 5px; /* Spazio tra i quadranti grandi */
+}
+
+/* ---------------------------------------------------- */
+/* Stili per il SINGOLO QUADRANTE (il quadrato grande) */
+/* ---------------------------------------------------- */
+.quadrant {
+    /* Stili generali (il colore di base 'white' sarà spesso sovrascritto da [ngStyle]) */
+    background-color: white; 
+    padding: 10px; 
+    
+    /* Proprietà della Griglia Interna */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1px; /* Spazio tra le celle piccole */
+}
+
+/* ---------------------------------------------------- */
+/* Stili per la SINGOLA CELLA (il quadratino piccolo) */
+/* ---------------------------------------------------- */
+.cell {
+    /* Stili per il contenuto della cella */
+    border: 1px solid black; 
+    background-color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px; 
+    cursor: pointer; /* Indica che è cliccabile */
+}
