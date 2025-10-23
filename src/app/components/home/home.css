@@ -32,7 +32,7 @@ button{
     font-family: var(--font);
     font-size: 3vh;
     cursor: pointer;
-    color: black;
+    color: black !important;
 }
 
 button:hover{

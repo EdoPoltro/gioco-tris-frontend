@@ -2,8 +2,8 @@
     <div class="container">
         <h1>GIOCO DEL MEGA TRIS</h1>
         <div class="button-container">
-            <button class="create-button" routerLink="/create-game">CREA UNA PARTITA</button>
-            <button class="join-button" routerLink="/join-game" >ENTRA IN PARTITA</button>
+            <button class="create-button" (click)="navigate('/create-game')">CREA UNA PARTITA</button>
+            <button class="join-button" (click)="navigate('/join-game')">ENTRA IN PARTITA</button>
         </div>
     </div>
 </main>
