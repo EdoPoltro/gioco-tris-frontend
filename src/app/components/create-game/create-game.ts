@@ -11,7 +11,9 @@ import { Game } from '../../models/game.model';
 })
 export class CreateGame implements OnInit, OnDestroy{
 
-  gameCode = "";
+  private startGameListener!: (game: Game) => void;
+  private codeGameListener!: (gameCode: string) => void;
+  gameCode: string = '';
 
   constructor(
     private socketService: SocketService,
@@ -22,22 +24,30 @@ export class CreateGame implements OnInit, OnDestroy{
   ngOnInit() {
     this.socketService.sendCreateGame();
 
-    this.socketService.listenCodeGame((gameCode: string) => {
+    this.codeGameListener = (gameCode: string) => {
       console.log(gameCode)
       this.gameCode = gameCode;
       this.cdr.detectChanges();
-    });
+    };
 
-    this.socketService.listentStartGame((game: Game) => {
+    const startGameListener = (game: Game) => {
       console.log(game);
       this.socketService.setGame(game);
       this.socketService.setPlayerNumber('1');
       this.router.navigate(['/game',game.gameCode]);
-    });
+    };
+
+    this.socketService.listenCodeGame(this.codeGameListener);
+
+    this.socketService.listentStartGame(startGameListener);
   }
 
   ngOnDestroy() {
-    this.socketService.resetCreateGame()
+    this.socketService.resetCreateGame();
+
+    this.socketService.offCodeGame(this.codeGameListener);
+
+    this.socketService.offStartGame(this.startGameListener);
   }
 
 }

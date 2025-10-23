@@ -60,16 +60,36 @@ export class SocketService {
     this.socket.on("code-game", callback);
   }
 
-  listentStartGame(callback: (msg: any) => void) {
+  listentStartGame(callback: (msg: any) => void) { // da cambiare msg
     this.socket.on("start-game", callback);
   }
 
-  listenJoinStatus(callback: (msg: any) => void) {
+  listenJoinStatus(callback: (status: {success: Boolean, description: String}) => void) {
     this.socket.on("join-status", callback);
   }
 
   listenEndGame(callback: (winner: string) => void) {
     this.socket.on('end-game', callback);
+  }
+
+  offCodeGame(callback: (gameCode: string) => void) {
+    this.socket.off("code-game", callback);
+  }
+
+  offStartGame(callback: (msg: any) => void) {
+    this.socket.off("start-game", callback);
+  }
+
+  offJoinStatus(callback: (status: {success: Boolean, description: String}) => void) {
+    this.socket.off("join-status", callback);
+  }
+
+  offEndGame(callback: (winner: string) => void) {
+    this.socket.off('end-game', callback);
+  }
+
+  offUpdateGame(callback: (game: Game) => void) {
+    this.socket.off("share-update-game", callback);
   }
 
   resetCreateGame() {

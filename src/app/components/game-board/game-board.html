@@ -1,4 +1,6 @@
 <main class="game-main">
+    <h1 *ngIf="game.currentPlayer == '1'" style="margin: 0 auto; position: absolute; top: 10vh;width: 100%; z-index: 999; height: 10vh; justify-content: center; display: flex; align-items: center; color: red;"> TOCCA A PLAYER 1</h1>
+    <h1 *ngIf="game.currentPlayer == '2'" style="margin: 0 auto; position: absolute; top: 10vh;width: 100%; z-index: 999; height: 10vh; justify-content: center; display: flex; align-items: center; color: blue;"> TOCCA A PLAYER 2</h1>
     <div class="game-container">
         <div 
             *ngFor="let item of game.board; let i = index" 

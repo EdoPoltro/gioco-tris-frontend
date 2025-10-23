@@ -2,9 +2,19 @@
 
     --main-color: #FFFBD0;
     --section-color: #FFFFFF;
+    --create-button-color: #34A853;
+    --join-button-color: #4285F4;
+    --interazione-color: red;
+
+    --transition-speed: 0.2s;
+
+    --radious: 1vh;
+
+    --shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+
+    --font: 'BBH Sans Hegarty', sans-serif;
 
 
-    /* --transition-speed: 0.2s; */
 
     /* --global-font: 'Poppins', sans-serif;   */
 

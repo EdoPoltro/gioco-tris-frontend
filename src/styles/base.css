@@ -3,4 +3,10 @@ main {
     width: 100%;
     align-items: center; 
     display: flex;
+    background-color: var(--main-color);
+}
+
+h1 {
+  font-family: 'BBH Sans Hegarty', sans-serif;
+  font-size: 3vh;
 }

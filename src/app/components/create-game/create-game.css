@@ -1,0 +1,41 @@
+.container{
+    box-shadow: var(--shadow);
+    margin: 0 auto; 
+    width: 50vh; 
+    background-color: #FFFFFF; 
+    text-align: center; 
+    height: 30vh; 
+    min-width: 250px; 
+    min-height: 150px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    border-radius: var(--radious);
+    padding: 2vh;
+}
+
+.data-container{
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+p{
+    font-family: var(--font);
+}
+
+.code{
+    box-shadow: var(--shadow);
+    border-radius: var(--radious);
+    font-size: 4vh;
+    background-color: red; 
+    text-align: center; 
+    align-items: center; 
+    height: 100px; 
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+}

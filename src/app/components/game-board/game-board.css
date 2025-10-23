@@ -7,20 +7,21 @@
 /* Stili per la GRIGLIA GRANDE (9 Quadranti) */
 /* ---------------------------------------------------- */
 .game-container {
-    /* Proprietà del DIV principale */
     margin: 0 auto; 
     width: 60vh; 
     height: 60vh; 
     min-width: 250px; 
     min-height: 250px; 
     text-align: center; 
+    border-radius: var(--radious);
+    box-shadow: var(--shadow);
     
-    /* Proprietà della Griglia */
-    background-color: black; 
+    background-color: #333333; 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, 1fr); 
-    gap: 5px; /* Spazio tra i quadranti grandi */
+    gap: 5px; 
+    
 }
 
 /* ---------------------------------------------------- */
@@ -35,7 +36,7 @@
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, 1fr);
-    gap: 1px; /* Spazio tra le celle piccole */
+    gap: 2px; /* Spazio tra le celle piccole */
 }
 
 /* ---------------------------------------------------- */

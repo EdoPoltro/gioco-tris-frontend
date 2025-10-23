@@ -1,10 +1,12 @@
-<main style="background-color: var(--main-color);">
-    <div style="margin: 0 auto; width: 50vh; background-color: #FFFFFF; text-align: center; height: 30vh; min-width: 250px; min-height: 150px; display: flex; flex-direction: column; gap: 10px;">
-        <h1>Entra in partita</h1>
-        <p>Inserisci il codice della partita</p>
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            <input type="text" style="width: 10vh; margin: 0 auto;" formControlName="gameCode" placeholder="Es. 123456">
-            <button type="submit" style="width: 10vh; margin: 0 auto;" [disabled]="form.invalid">Entra</button>
-        </form> 
+<main>
+    <div class="container">
+        <h1>UNISCITI ALLA PARTITA</h1>
+        <div class="data-container">
+            <p>Inserisci il codice della partita</p>
+            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <input type="text" class="input-code" formControlName="gameCode" placeholder="Es. 123456">
+                <button type="submit" class="submit-button" [disabled]="form.invalid">Unisciti</button>
+            </form> 
+        </div>
     </div>
 </main>
