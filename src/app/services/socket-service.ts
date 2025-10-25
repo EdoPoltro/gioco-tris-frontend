@@ -33,8 +33,8 @@ export class SocketService {
   // private playerNumber: '1' | '2' | '' = '';
 
   constructor() {
-    // this.socket = io('https://gioco-tris-backend.onrender.com');
-    this.socket = io('http://localhost:3000/');
+    this.socket = io('https://gioco-tris-backend.onrender.com');
+    // this.socket = io('http://localhost:3000/');
   }
 
   sendCreateGame(){
