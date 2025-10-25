@@ -31,9 +31,8 @@ export class CreateGame implements OnInit, OnDestroy{
     };
 
     const startGameListener = (game: Game) => {
-      console.log(game);
-      this.socketService.setGame(game);
-      this.socketService.setPlayerNumber('1');
+      // console.log(game);
+      this.socketService.setLocalStorage(game.gameCode, '1');
       this.router.navigate(['/game',game.gameCode]);
     };
 

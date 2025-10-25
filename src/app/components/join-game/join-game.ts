@@ -41,9 +41,8 @@ export class JoinGame implements OnInit, OnDestroy{
     }; 
 
     this.startGameListener = (game: Game) => {
-      console.log(game);
-      this.socketService.setGame(game);
-      this.socketService.setPlayerNumber('2');
+      // console.log(game);
+      this.socketService.setLocalStorage(game.gameCode, '2');
       this.router.navigate(['/game',game.gameCode]);
     };
     
